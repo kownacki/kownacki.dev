@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { Header } from './Header';
 
 export const PAGE_WIDTH = 1200;
 
@@ -11,11 +12,7 @@ const Root = styled.div`
 export const App: FC = () => {
   return (
     <Root>
-      <header>
-        <p>
-          Yay!
-        </p>
-      </header>
+      <Header />
     </Root>
   );
 };
