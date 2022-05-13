@@ -16,7 +16,8 @@ const Root = styled.div`
 `;
 
 const Main = styled.div`
-  width: ${MAIN_WIDTH}px;
+  max-width: ${MAIN_WIDTH}px;
+  padding: 0 20px;
   margin: 0 auto;
 `;
 
