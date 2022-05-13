@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { HEADER_HEIGHT, MAIN_WIDTH } from './contants';
+import { HEADER_HEIGHT, MAIN_WIDTH, ROOT_PATH } from './contants';
 
 const Root = styled.header`
   background: black;
@@ -16,11 +17,18 @@ const Container = styled.div`
   margin: auto;
 `;
 
+const HeaderLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+`;
+
 export const Header: FC = () => {
   return (
     <Root>
       <Container>
-        Kownacki.dev
+        <HeaderLink to={ROOT_PATH}>
+          Kownacki.dev
+        </HeaderLink>
       </Container>
     </Root>
   );

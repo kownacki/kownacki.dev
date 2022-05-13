@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { Article } from './Article';
 import { articles } from './articles';
-import { MAIN_WIDTH } from './contants';
+import { MAIN_WIDTH, ROOT_PATH } from './contants';
 import { Header } from './Header';
 import { Landing } from './Landing';
 import { ArticleType } from './types';
@@ -26,7 +26,7 @@ export const App: FC = () => {
       <Header />
       <Main>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path={ROOT_PATH} element={<Landing />} />
           <Route path="/test" element={<Article article={articles.find((article) => article.id = pathToArticleId['/test']) as ArticleType} />} />
         </Routes>
       </Main>
