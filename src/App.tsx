@@ -1,9 +1,15 @@
 import React, { FC } from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Article } from './Article';
+import { articles } from './articles';
 import { Header } from './Header';
 import { Landing } from './Landing';
-import { Tbd } from './Tbd';
+import { ArticleType } from './types';
+
+export const pathToArticleId: Record<string, string> = {
+  '/test': '1',
+};
 
 export const PAGE_WIDTH = 1200;
 
@@ -18,7 +24,7 @@ export const App: FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="tbd" element={<Tbd />} />
+        <Route path="/test" element={<Article article={articles.find((article) => article.id = pathToArticleId['/test']) as ArticleType} />} />
       </Routes>
     </Root>
   );
