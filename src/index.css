@@ -1,7 +1,7 @@
 /* Minimal global styles. Other styling done by styled-component */
 body {
   font: 18px Arial;
-  margin: 20px;
+  margin: 0;
   --primary-color: #2C9CDB;
   --light-grey: #F2F2F2;
   --dark-grey: #E0E0E0;

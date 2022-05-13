@@ -1,13 +1,27 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import { HEADER_HEIGHT, MAIN_WIDTH } from './contants';
 
 const Root = styled.header`
+  background: black;
+  color: white;
+  font-size: 30px;
+  font-family: monospace;
+  height: ${HEADER_HEIGHT}px;
+  line-height: ${HEADER_HEIGHT}px;
+`;
+
+const Container = styled.div`
+  width: ${MAIN_WIDTH}px;
+  margin: auto;
 `;
 
 export const Header: FC = () => {
   return (
     <Root>
-      Kownacki.dev
+      <Container>
+        Kownacki.dev
+      </Container>
     </Root>
   );
 };
