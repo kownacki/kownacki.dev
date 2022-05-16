@@ -8,19 +8,26 @@ import { Date } from './Date';
 const Root = styled.div`
 `;
 
+const Introduction = styled.p`
+  font-weight: 700;
+`;
+
 export interface ArticleProps {
   article: ArticleType,
 }
 
-export const Article: FC<ArticleProps> = ({ article: {title, publishDate, content }}) => {
+export const Article: FC<ArticleProps> = ({ article}) => {
   return (
     <Root>
-      <h1>{title}</h1>
+      <h1>{article.title}</h1>
       <Avatar />
       <Author />
-      <Date date={publishDate} />
+      <Date date={article.publishDate} />
+      <Introduction>
+        {article.introduction}
+      </Introduction>
       <div
-        dangerouslySetInnerHTML={{__html: content}}>
+        dangerouslySetInnerHTML={{__html: article.content}}>
       </div>
     </Root>
   );
