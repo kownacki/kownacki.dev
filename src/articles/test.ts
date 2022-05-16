@@ -1,3 +1,11 @@
+const code = `onSubmit(e) {
+  e.preventDefault();
+  const job = {
+    title: 'Developer',
+    company: 'Facebook',
+  };
+};`
+
 export const introduction = `
   So you created a dynamic website which allows your users to add and modify their own content.
   Perhaps they can also upload their own images, for example avatars. You know that people often upload their 
@@ -8,7 +16,9 @@ export const introduction = `
 `;
 
 export const content = `
+  <h2>Upload image</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et vulputate dolor, et bibendum risus. In egestas mattis turpis, lobortis aliquam risus pretium aliquam. Donec ornare ipsum ut est tincidunt, non ullamcorper ex tincidunt. Duis vulputate placerat accumsan. Phasellus ligula augue, dignissim ut ligula eget, mattis gravida velit. Proin et augue vel velit hendrerit rhoncus. Morbi a turpis sed nisi egestas iaculis in at mauris. Proin eget maximus erat. Donec in nulla mollis metus feugiat aliquam vitae vel dolor. Phasellus in orci fringilla est tincidunt faucibus in vitae lacus. Sed sagittis in nisi eget pellentesque.
+    To upload an image we need to create
+    <pre><code class="language-javascript">${code}</code></pre>
   </p>
 `;

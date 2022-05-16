@@ -1,4 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
+import Prism from 'prismjs';
+import 'prismjs/themes/prism-twilight.css';
 import styled from 'styled-components';
 import { ArticleType } from '../types';
 import { Author } from './Author';
@@ -17,6 +19,10 @@ export interface ArticleProps {
 }
 
 export const Article: FC<ArticleProps> = ({ article}) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [article.content]);
+
   return (
     <Root>
       <h1>{article.title}</h1>
