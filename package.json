@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "mk-js-utils": "git+https://github.com/kownacki/mk-js-utils.git#master",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

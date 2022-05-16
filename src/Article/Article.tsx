@@ -18,6 +18,11 @@ export interface ArticleProps {
   article: ArticleType,
 }
 
+const upload = () => {
+  const input = document.getElementById('input');
+  input?.click();
+}
+
 export const Article: FC<ArticleProps> = ({ article}) => {
   useEffect(() => {
     Prism.highlightAll();
@@ -35,6 +40,12 @@ export const Article: FC<ArticleProps> = ({ article}) => {
       <div
         dangerouslySetInnerHTML={{__html: article.content}}>
       </div>
+      <input
+        id="input"
+        type="file"
+        accept="image/png, image/jpeg"
+      />
+      <button onClick={upload}>Upload</button>
     </Root>
   );
 };
